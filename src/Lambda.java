@@ -2,6 +2,8 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class Lambda {
+    public double a;
+    public double b;
 
     /**
      * Function to get max value.
@@ -9,9 +11,9 @@ public class Lambda {
      * @return lambda expression.
      */
     public static BiFunction<Double, Double, Double> getMax() {
-        // TODO replace null with lambda expression
-        return null;
-    }
+        return (a, b) -> Math.max(a, b);
+
+        }
 
     /**
      * Function to get square root.
@@ -19,7 +21,6 @@ public class Lambda {
      * @return lambda expression.
      */
     public static Function<Double, Double> getSqrt() {
-        // TODO replace null with method reference
-        return null;
+        return Math::sqrt;
     }
 }
